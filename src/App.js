@@ -1,9 +1,14 @@
 import React from 'react';
+import Search from './components/Search';
+import Temp from './components/Temp';
+import WeatherDetails from './components/WeatherDetails';
 
 const App = () => {
   return (
     <div className='app'>
-      <h1>Building a weather app</h1>
+      <Temp />
+      <Search />
+      <WeatherDetails />
     </div>
   );
 };

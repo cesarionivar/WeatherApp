@@ -12,6 +12,8 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: #100E1D;
 }
 
 h1,
@@ -29,4 +31,229 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__temp {
+  background-color: #1E213A;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__tempTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__tempTop button {
+  background-color: #6E707A;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.app__tempTop button:hover {
+  background-color: #62646e;
+}
+
+.app__tempTop span {
+  font-size: 0.8rem;
+  background-color: #6E707A;
+  padding: 10px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.app__tempTop span:hover {
+  background-color: #62646e;
+}
+
+.app__temp img {
+  align-self: center;
+  margin-top: 30px;
+  object-fit: contain;
+}
+
+.temp {
+  font-size: 5rem;
+  text-align: center;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.temp span {
+  font-size: 2rem;
+  position: absolute;
+}
+
+.weather {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.location {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.search__menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1E213A;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  transition: all 0.4s ease-in-out;
+  transform: translate(-100%, 0);
+  overflow-x: hidden;
+}
+
+.search__menu.show {
+  transform: translate(0, 0);
+}
+
+.search__menuExit {
+  position: absolute;
+  top: 10px;;
+  right: 10px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.search__menuForm {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.search__menuForm span {
+  position: absolute;
+  top: 49px;
+  left: 20px;
+  color: lightgray;
+}
+
+.search__menuForm input {
+  width: 95%;
+  padding: 10px 10px 10px 32px;
+  border: 1px solid lightgray;
+  background-color: transparent;
+  margin: 0 10px;
+  color: lightgray;
+  font-size: 1rem;
+}
+
+.search__menuForm button {
+  display: none;
+}
+
+.search__menuResults {
+  margin-bottom: 40px;
+}
+
+.search__menuResults li {
+  padding: 20px 10px 10px 20px;
+}
+
+.search__menuResults li a {
+  font-size: 1rem;
+  color: white;
+}
+
+.search__menuResults li:hover a {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+
+  .app {
+    flex-direction: row;
+  }
+
+  .app__temp,
+  .search__menu {
+    width: 300px;
+  }
+
+  .location {
+    position: absolute;
+    bottom: 40px;
+    max-width: 300px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+}
+
+.weatherDetails {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.weatherDetails > p {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.weatherDetails__feature > div,
+.weatherDetails__feature {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.weatherDetails__feature {
+  gap: 5px;
+}
+
+.weatherDetails__feature > div > div {
+  background-color: #1E213A;
+  padding: 10px 80px 80px 80px;
+}
+
+
+.weatherDetails__feature > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.weatherDetails__feature > div > div > .feature__name {
+  justify-content: flex-start;
+  font-size:  1rem;
+}
+
+.weatherDetails__feature > div > div > .feature__data {
+  font-size: 2.3rem;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 900px) {
+
+  .weatherDetails {
+    margin: auto;
+  }
+
+  .weatherDetails__feature {
+    flex-direction: row;
+    gap: 20px;
+  }
 }
