@@ -22,20 +22,20 @@ const Temp = () => {
   return (
     <div className='app__temp'>
       <div className='app__tempTop'>
-        <button onClick={handleOpenMenu}>Search places</button>
+        <button onClick={handleOpenMenu}>Search place</button>
         <span>
           <i className='fas fa-location-arrow'></i>
         </span>
       </div>
       <img
-        src={`https://openweathermap.org/img/wn/${clima?.weather[0].icon}@4x.png`}
+        src={`https://openweathermap.org/img/wn/${clima?.weather[0]?.icon}@4x.png`}
         alt='Weather'
       />
       <p className='temp'>
         {tempCelsius}
         <span>°C</span>
       </p>
-      <p className='weather'>{clima?.weather[0].main}</p>
+      <p className='weather'>{clima?.weather[0]?.main}</p>
       <p className='location'>
         <i className='fas fa-map-marker-alt'></i> &nbsp; {clima?.name}
       </p>

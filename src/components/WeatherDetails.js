@@ -36,7 +36,7 @@ const WeatherDetails = () => {
           <div className='presure'>
             <p className='feature__name'>Air Presure</p>
             <p className='feature__data'>
-              <span>{clima?.main.pressure}</span>
+              <span>{clima?.main?.pressure}</span>
               <span>mb</span>
             </p>
           </div>
