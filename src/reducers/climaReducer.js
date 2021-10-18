@@ -49,6 +49,12 @@ export const climaInitialState = {
 
 export const climaReducer = (state, action) => {
   switch (action.type) {
+    case types.setClima:
+      return {
+        ...state,
+        clima: action.payload,
+      };
+
     default:
       return state;
   }
